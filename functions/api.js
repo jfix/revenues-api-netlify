@@ -12,12 +12,12 @@ exports.handler = (event, context, callback) => {
       const db = client.db(process.env.MONGO_DB)
       client.close()
 
-      return callback(null, {
+      callback(null, {
         statusCode: 200,
         body: 'No worries, all is working fine!'
       })    
     })
     .catch((err) => {
-      console.log(err)
+      callback(err)
     })
 }
