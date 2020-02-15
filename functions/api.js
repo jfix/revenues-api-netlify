@@ -1,6 +1,6 @@
 'use strict';
 
-const MongoClient = require('mongodb').MongoClient({ useUnifiedTopology: true })
+const MongoClient = require('mongodb').MongoClient
 require('dotenv').config()
 
 const url = `mongodb+srv://${process.env.MONGO_LOGIN}:${process.env.MONGO_PWD}@${process.env.MONGO_HOST}/${process.env.MONGO_DB}?retryWrites=true&w=majority`
